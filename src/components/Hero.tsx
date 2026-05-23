@@ -98,7 +98,7 @@ export default function Hero() {
           {[
             { value: "25+", label: "Years in IT" },
             { value: "10+", label: "Years in Python" },
-            { value: "3", label: "Continents" },
+            { value: "5", label: "Continents" },
             { value: "∞", label: "Curiosity" },
           ].map((s) => (
             <div key={s.label} className="text-center">

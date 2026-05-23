@@ -101,8 +101,8 @@ export default function AboutPage() {
                 </p>
                 <p>
                   My career has taken me from Salvador to São Paulo, with professional
-                  assignments in the US — building systems for energy, aerospace, tax-tech,
-                  fitness, and chemical sectors.
+                  work in the US and global collaboration spanning 5 continents — working
+                  alongside colleagues in India, Australia, UK, France, and beyond.
                 </p>
                 <p>
                   I bring a solid track record using Django, Django REST Framework, FastAPI,
@@ -137,7 +137,7 @@ export default function AboutPage() {
                   },
                   {
                     title: "Cross-Cultural Teams",
-                    desc: "I've worked with teams across 4 continents and thrive in multicultural, distributed environments.",
+                    desc: "Through 25+ years at a multinational, I collaborated with colleagues across India, Australia, UK, France, and more — 5 continents, one shared goal.",
                   },
                 ].map((item) => (
                   <li key={item.title} className="flex gap-3">
