@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { blogPosts } from "@/data/blog";
-import { Calendar, Clock, ArrowLeft, Tag } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Tag, ExternalLink } from "lucide-react";
 import LinkedInIcon from "@/components/LinkedInIcon";
 import GitHubIcon from "@/components/GitHubIcon";
 
@@ -87,6 +87,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           <div className="mt-8 h-px bg-gradient-to-r from-accent/40 via-violet/40 to-transparent" />
         </header>
+
+        {/* Medium CTA */}
+        {post.mediumUrl && (
+          <div className="mb-8 glass rounded-xl p-5 flex items-center justify-between gap-4 border-l-2 border-accent/50">
+            <p className="text-muted text-sm">Full article published on Medium.</p>
+            <a
+              href={post.mediumUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-bg font-semibold rounded text-sm hover:bg-accent-dim transition-colors flex-shrink-0"
+            >
+              Read on Medium <ExternalLink size={14} />
+            </a>
+          </div>
+        )}
 
         {/* Content */}
         <article
