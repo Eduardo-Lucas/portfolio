@@ -100,9 +100,9 @@ export default function AboutPage() {
                   and support digital transformation.
                 </p>
                 <p>
-                  My career has taken me from Salvador to São Paulo, with professional
-                  work in the US and global collaboration spanning 5 continents — working
-                  alongside colleagues in India, Australia, UK, France, and beyond.
+                  My career has taken me from Salvador to São Paulo, including professional
+                  work in the US — where I met colleagues from across the globe: India,
+                  Australia, UK, France, and beyond.
                 </p>
                 <p>
                   I bring a solid track record using Django, Django REST Framework, FastAPI,
@@ -137,7 +137,7 @@ export default function AboutPage() {
                   },
                   {
                     title: "Cross-Cultural Teams",
-                    desc: "Through 25+ years at a multinational, I collaborated with colleagues across India, Australia, UK, France, and more — 5 continents, one shared goal.",
+                    desc: "Through 25+ years at a multinational, I met colleagues from India, Australia, UK, France, and more while working with the US headquarters — people from 5 continents, one shared goal.",
                   },
                 ].map((item) => (
                   <li key={item.title} className="flex gap-3">

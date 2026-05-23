@@ -149,7 +149,7 @@ export const experience: Experience[] = [
       "Gap Analysis for SAP ERP (Plant Maintenance & Project System modules).",
       "SOX audit mechanisms with US headquarters in Houston, Texas.",
       "Adapted internal ERP for US GAAP / BR GAAP compliance.",
-      "Part of the global IT Leaders group spanning 5 continents — collaborating with colleagues in India, Australia, UK, France, and beyond.",
+      "Part of the global IT Leaders group — met colleagues from India, Australia, UK, France, and beyond while working with the US headquarters in Houston, Texas.",
     ],
     tags: ["ERP", "Oracle", "SAP", "SOX", "US GAAP", "Enterprise IT"],
   },
