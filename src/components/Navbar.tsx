@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { href: "/", label: "Home" },
@@ -73,6 +74,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
           <a
             href="mailto:eduardolucas40@gmail.com"
             className="px-4 py-2 text-sm font-semibold text-bg bg-accent rounded hover:bg-accent-dim transition-colors duration-200"
@@ -110,13 +112,14 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-            <li className="pt-2">
+            <li className="pt-2 flex items-center gap-3">
               <a
                 href="mailto:eduardolucas40@gmail.com"
-                className="block px-4 py-3 text-sm font-semibold text-center text-bg bg-accent rounded"
+                className="flex-1 block px-4 py-3 text-sm font-semibold text-center text-bg bg-accent rounded"
               >
                 Hire Me
               </a>
+              <ThemeToggle />
             </li>
           </ul>
         </div>

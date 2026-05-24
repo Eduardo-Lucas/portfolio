@@ -17,19 +17,31 @@
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
 }
 
+html.light {
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface2: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-accent: #0099bb;
+  --color-accent-dim: #007a99;
+  --color-ink: #0f172a;
+  --color-muted: #475569;
+  --color-muted2: #94a3b8;
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: #0a0f1e;
-  color: #f1f5f9;
+  background-color: var(--color-bg, #0a0f1e);
+  color: var(--color-ink, #f1f5f9);
   font-family: "Inter", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #0a0f1e; }
-::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+::-webkit-scrollbar-track { background: var(--color-bg, #0a0f1e); }
+::-webkit-scrollbar-thumb { background: var(--color-border, #1e293b); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(0, 212, 255, 0.3); }
 
 .glow-cyan { box-shadow: 0 0 30px rgba(0,212,255,0.25), 0 0 80px rgba(0,212,255,0.08); }
@@ -40,6 +52,33 @@ body {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+html.light .glass {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+html.light .glow-cyan { box-shadow: 0 0 30px rgba(0,153,187,0.2), 0 0 80px rgba(0,153,187,0.06); }
+html.light .glow-violet { box-shadow: 0 0 30px rgba(124,58,237,0.15), 0 0 80px rgba(124,58,237,0.05); }
+
+html.light .grid-bg {
+  background-image:
+    linear-gradient(rgba(0,153,187,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,153,187,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+html.light .chip {
+  border-color: rgba(0, 153, 187, 0.4);
+  color: #0099bb;
+  background: rgba(0, 153, 187, 0.08);
+}
+
+html.light .chip-violet {
+  border-color: rgba(124, 58, 237, 0.35);
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.08);
 }
 
 .gradient-text {
