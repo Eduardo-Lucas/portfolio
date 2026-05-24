@@ -11,6 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.eduardo-lucas-dev.com"),
   title: "Eduardo Lucas – Senior Python Engineer & Data Architect",
   description:
     "Senior Python/Django Developer with 25+ years of enterprise IT experience. Specialising in scalable APIs, ERP modernisation, and data architecture.",
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     description:
       "Senior Python/Django Developer with 25+ years of enterprise IT experience.",
     type: "website",
+    url: "https://www.eduardo-lucas-dev.com",
   },
 };
 
