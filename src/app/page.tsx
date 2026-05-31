@@ -3,13 +3,13 @@ import AnimatedSection from "@/components/AnimatedSection";
 import LinkedInIcon from "@/components/LinkedInIcon";
 import GitHubIcon from "@/components/GitHubIcon";
 import Link from "next/link";
-import { blogPosts } from "@/data/blog";
+import { getAllPosts } from "@/lib/blog";
 import { skillGroups } from "@/data/skills";
 import { experience } from "@/data/experience";
 import { ArrowRight, MapPin, Calendar, Clock } from "lucide-react";
 
-export default function HomePage() {
-  const featuredPosts = blogPosts.slice(0, 3);
+export default async function HomePage() {
+  const featuredPosts = (await getAllPosts()).slice(0, 3);
   const currentRoles = experience.filter((e) => e.current);
   const recentExp = experience.slice(0, 4);
 

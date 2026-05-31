@@ -1,6 +1,6 @@
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
-import { blogPosts } from "@/data/blog";
+import { getAllPosts } from "@/lib/blog";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 
 export const metadata = {
@@ -8,9 +8,10 @@ export const metadata = {
   description: "Articles on Python, Django, data architecture, and enterprise software by Eduardo Lucas.",
 };
 
-export default function BlogPage() {
-  const featured = blogPosts[0];
-  const rest = blogPosts.slice(1);
+export default async function BlogPage() {
+  const posts = await getAllPosts();
+  const featured = posts[0];
+  const rest = posts.slice(1);
 
   return (
     <main className="min-h-screen pt-28 pb-20">
