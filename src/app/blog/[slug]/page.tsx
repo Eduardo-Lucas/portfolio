@@ -20,18 +20,28 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 function renderMarkdown(content: string): string {
-  return content
-    .trim()
+  const codeBlocks: string[] = [];
+  const withPlaceholders = content.trim().replace(
+    /```(\w+)?\n([\s\S]+?)```/gm,
+    (_, _lang, code) => {
+      const idx = codeBlocks.length;
+      codeBlocks.push(`<pre class="my-6 p-5 rounded-xl bg-surface2 border border-white/8 overflow-x-auto"><code class="text-sm font-mono text-muted leading-relaxed">${code}</code></pre>`);
+      return `\x00CODEBLOCK_${idx}\x00`;
+    }
+  );
+
+  const processed = withPlaceholders
     .replace(/^# (.+)$/gm, '<h1 class="text-3xl md:text-4xl font-black tracking-tight text-ink mt-10 mb-5 first:mt-0">$1</h1>')
-    .replace(/^## (.+)$/gm, '<h2 class="text-2xl font-bold text-ink mt-8 mb-4">$2</h2>')
+    .replace(/^## (.+)$/gm, '<h2 class="text-2xl font-bold text-ink mt-8 mb-4">$1</h2>')
     .replace(/^### (.+)$/gm, '<h3 class="text-xl font-semibold text-ink mt-6 mb-3">$1</h3>')
     .replace(/\*\*(.+?)\*\*/g, '<strong class="text-ink font-semibold">$1</strong>')
     .replace(/\*(.+?)\*/g, '<em class="text-muted italic">$1</em>')
     .replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-surface2 text-accent text-sm font-mono border border-white/8">$1</code>')
-    .replace(/```(\w+)?\n([\s\S]+?)```/gm, '<pre class="my-6 p-5 rounded-xl bg-surface2 border border-white/8 overflow-x-auto"><code class="text-sm font-mono text-muted leading-relaxed">$2</code></pre>')
     .replace(/^- (.+)$/gm, '<li class="flex gap-2 text-muted"><span class="text-accent mt-1 flex-shrink-0">›</span><span>$1</span></li>')
     .replace(/(<li[\s\S]+?<\/li>)/gm, '<ul class="space-y-2 my-4">$1</ul>')
-    .replace(/^(?!<[hupco]|```)(.*\S.*)$/gm, '<p class="text-muted leading-relaxed my-4">$1</p>');
+    .replace(/^(?!<)(.*\S.*)$/gm, '<p class="text-muted leading-relaxed my-4">$1</p>');
+
+  return codeBlocks.reduce((html, block, idx) => html.replace(`\x00CODEBLOCK_${idx}\x00`, block), processed);
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
