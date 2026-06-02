@@ -111,7 +111,7 @@ export default function CareerPage() {
               Remote-friendly, internationally experienced.
             </p>
             <a
-              href="mailto:eduardolucas40@gmail.com"
+              href="mailto:hi@eduardo-lucas-dev.com"
               className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-bg font-semibold rounded hover:bg-accent-dim transition-colors"
             >
               Get In Touch
