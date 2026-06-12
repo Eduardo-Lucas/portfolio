@@ -17,7 +17,12 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isCopa, setIsCopa] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setIsCopa(document.documentElement.classList.contains("copa"));
+  }, []);
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
@@ -46,6 +51,9 @@ export default function Navbar() {
           <span className="font-semibold text-ink tracking-tight">
             Eduardo<span className="text-accent">.</span>
           </span>
+          {isCopa && (
+            <span className="text-xl animate-float" title="Copa 2026 🇧🇷">🇧🇷</span>
+          )}
         </Link>
 
         {/* Desktop links */}
