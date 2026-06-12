@@ -29,6 +29,70 @@ html.light {
   --color-muted2: #94a3b8;
 }
 
+html.copa {
+  --color-accent: #009C3B;
+  --color-accent-dim: #007a2f;
+  --color-violet: #FFDF00;
+  --color-violet-dim: #ccb200;
+}
+
+html.copa.light {
+  --color-accent: #007a2f;
+  --color-accent-dim: #005c22;
+  --color-violet: #ccb200;
+  --color-violet-dim: #a89100;
+}
+
+html.copa .gradient-text {
+  background: linear-gradient(135deg, #009C3B 0%, #FFDF00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+html.copa .glow-cyan { box-shadow: 0 0 30px rgba(0,156,59,0.25), 0 0 80px rgba(0,156,59,0.08); }
+html.copa .glow-violet { box-shadow: 0 0 30px rgba(255,223,0,0.25), 0 0 80px rgba(255,223,0,0.08); }
+
+html.copa .chip {
+  border-color: rgba(0, 156, 59, 0.35);
+  color: #009C3B;
+  background: rgba(0, 156, 59, 0.1);
+}
+
+html.copa .chip-violet {
+  border-color: rgba(255, 223, 0, 0.35);
+  color: #FFDF00;
+  background: rgba(255, 223, 0, 0.08);
+}
+
+html.copa .grid-bg {
+  background-image:
+    linear-gradient(rgba(0,156,59,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,156,59,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+html.copa.light .grid-bg {
+  background-image:
+    linear-gradient(rgba(0,122,47,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,122,47,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+html.copa.light .chip {
+  border-color: rgba(0, 122, 47, 0.4);
+  color: #007a2f;
+  background: rgba(0, 122, 47, 0.08);
+}
+
+html.copa.light .chip-violet {
+  border-color: rgba(161, 129, 0, 0.35);
+  color: #a18100;
+  background: rgba(161, 129, 0, 0.08);
+}
+
+html.copa ::-webkit-scrollbar-thumb:hover { background: rgba(0, 156, 59, 0.3); }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 

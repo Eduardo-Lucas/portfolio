@@ -35,7 +35,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light')document.documentElement.classList.add('light');}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light')document.documentElement.classList.add('light');}catch(e){}})();(function(){try{var n=new Date(),s=new Date('2026-06-11'),e=new Date('2026-07-20');if(n>=s&&n<e)document.documentElement.classList.add('copa');}catch(e){}})();`,
           }}
         />
       </head>
