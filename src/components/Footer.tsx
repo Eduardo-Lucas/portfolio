@@ -71,7 +71,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Eduardo Lucas. All rights reserved.
           </p>
           <p className="text-muted2 text-xs font-mono">
-            Built with Next.js · Deployed locally
+            Built with Next.js · Deployed on Vercel
           </p>
         </div>
       </div>

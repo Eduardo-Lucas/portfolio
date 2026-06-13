@@ -10,6 +10,8 @@ export async function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
 }
 
+const BASE_URL = "https://www.eduardo-lucas-dev.com";
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
@@ -17,6 +19,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${post.title} – Eduardo Lucas`,
     description: post.excerpt,
+    alternates: {
+      canonical: `${BASE_URL}/blog/${slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url: `${BASE_URL}/blog/${slug}`,
+      publishedTime: new Date(post.date).toISOString(),
+      authors: ["Eduardo Lucas"],
+      tags: post.tags,
+    },
   };
 }
 
@@ -29,7 +43,33 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const related = allPosts.filter((p) => p.slug !== slug).slice(0, 2);
   const html = post.html;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    author: {
+      "@type": "Person",
+      name: "Eduardo Lucas",
+      url: `${BASE_URL}/about`,
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Eduardo Lucas",
+      url: BASE_URL,
+    },
+    datePublished: new Date(post.date).toISOString(),
+    dateModified: new Date(post.date).toISOString(),
+    url: `${BASE_URL}/blog/${post.slug}`,
+    keywords: post.tags.join(", "),
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <main className="min-h-screen pt-28 pb-20">
       <div className="max-w-3xl mx-auto px-6">
 
@@ -142,5 +182,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         )}
       </div>
     </main>
+    </>
   );
 }
