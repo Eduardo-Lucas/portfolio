@@ -10,7 +10,7 @@ There's a debate happening in hiring rooms right now, and it's making engineers 
 
 It goes something like this: a candidate opens their laptop for a technical interview. They're sharp, articulate, clearly experienced. Then the interviewer says, *"We'd like you to complete this without AI assistance."* And suddenly, the dynamic shifts. Some candidates freeze. Others argue the premise. A few walk out.
 
-I've heard variations of this story from colleagues in São Paulo, London, and San Francisco. And it's raising a question that doesn't have an easy answer: **what does "knowing how to code" even mean in 2025?**
+I've heard variations of this story from colleagues in São Paulo, London, and San Francisco. And it's raising a question that doesn't have an easy answer: **what does "knowing how to code" even mean in 2026?**
 
 ---
 
