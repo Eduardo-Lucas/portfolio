@@ -42,6 +42,7 @@ export default async function BlogPage() {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
+                    timeZone: "UTC",
                   })}
                 </div>
                 <div className="flex items-center gap-1.5 text-xs text-muted2 font-mono">
@@ -84,6 +85,7 @@ export default async function BlogPage() {
                         year: "numeric",
                         month: "short",
                         day: "numeric",
+                        timeZone: "UTC",
                       })}
                     </div>
                     <span>·</span>
