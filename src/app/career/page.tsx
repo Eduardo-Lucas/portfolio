@@ -3,8 +3,9 @@ import { experience } from "@/data/experience";
 import { MapPin, Calendar, Briefcase } from "lucide-react";
 
 export const metadata = {
-  title: "Career – Eduardo Lucas",
-  description: "25+ years of enterprise IT experience across Brazil, USA, and beyond.",
+  title: "Career – Eduardo Lucas, Python Developer at DGTAX, Salvador Brazil",
+  description:
+    "Eduardo Lucas's career timeline: 25+ years of enterprise IT experience across Brazil and the USA, currently a Python Developer at DGTAX in Salvador, Bahia.",
 };
 
 export default function CareerPage() {

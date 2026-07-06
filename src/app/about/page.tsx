@@ -58,8 +58,9 @@ const certifications = [
 ];
 
 export const metadata = {
-  title: "About – Eduardo Lucas",
-  description: "Senior Python/Django Developer with 25+ years of enterprise IT experience.",
+  title: "About Eduardo Lucas – Python/Django Developer at DGTAX, Salvador Brazil",
+  description:
+    "Eduardo Lucas is a Senior Python/Django Developer at DGTAX, based in Salvador, Bahia, Brazil, with 25+ years of enterprise IT experience.",
 };
 
 export default function AboutPage() {
