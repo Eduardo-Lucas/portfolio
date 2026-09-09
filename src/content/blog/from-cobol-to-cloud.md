@@ -12,19 +12,6 @@ tags: ["Career", "Reflection", "Professional Growth"]
 
 There's a trend going around where people recreate themselves in the 80s, and I couldn't resist joining in — except mine had to be set somewhere specific: a Computing Centre for the Brazilian Army, where I actually got my start.
 
-Picture me sitting in front of an IBM terminal, green phosphor glow, a printer still chewing through fanfold paper behind me. The screen reads:
-
-```
-CIE - EXÉRCITO BRASILEIRO
-SISTEMA OPERACIONAL DOS/CP
-VERSÃO 3.1
-
-READY.
-_
-```
-
-Stacked next to the keyboard: *Linguagem COBOL*, *Sistemas Operacionais*, *Processamento de Dados*, *Organização de Computadores*, and a *Manual Técnico* thick enough to stop a door. That was the entire internet, back then. No Stack Overflow, no docs site, no Ctrl+F. If the answer wasn't in one of those books, you asked the sergeant two terminals down, or you figured it out yourself.
-
 ## The best thing a "programmer" could dream of
 
 I wasn't a "developer" in 1985 — that word didn't exist yet in this context. I was a *programmer*, full stop, and COBOL was the language. Not one of several options. **The** option, if you were lucky enough to be working with data processing at all. Getting a seat in that room, at that Computing Centre, felt like getting handed the future.
