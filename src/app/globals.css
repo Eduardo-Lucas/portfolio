@@ -267,14 +267,15 @@ html.light .blog-content pre code {
     gap: 0.5rem;
   }
   & li {
-    display: flex;
-    gap: 0.5rem;
+    position: relative;
+    padding-left: 1.25rem;
   }
   & li::before {
     content: "›";
     color: var(--color-accent);
-    flex-shrink: 0;
-    margin-top: 0.1em;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
   & code {
