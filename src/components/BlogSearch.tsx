@@ -28,7 +28,8 @@ export default function BlogSearch({ children }: Props) {
   useEffect(() => {
     if (!isSearching || index !== null || loading) return;
     setLoading(true);
-    fetch("/api/search")
+    // no-cache: always revalidate, even if the browser holds an older copy it still considers fresh
+    fetch("/api/search", { cache: "no-cache" })
       .then((res) => res.json())
       .then((data: SearchIndexEntry[]) => setIndex(data))
       .finally(() => setLoading(false));
