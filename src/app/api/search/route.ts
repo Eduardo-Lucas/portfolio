@@ -8,7 +8,9 @@ export async function GET() {
 
   return NextResponse.json(index, {
     headers: {
-      "Cache-Control": "public, max-age=3600",
+      // Browsers must revalidate so a new deploy's index shows up immediately;
+      // the CDN still serves the prerendered copy and is purged on each deploy.
+      "Cache-Control": "public, max-age=0, must-revalidate",
     },
   });
 }
