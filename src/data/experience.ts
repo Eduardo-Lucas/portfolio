@@ -15,7 +15,7 @@ export const experience: Experience[] = [
     role: "Data Architect",
     period: "Nov 2025 – Present",
     duration: "7 months",
-    location: "São Paulo, Brazil",
+    location: "Salvador, Brazil",
     current: true,
     description: [
       "Designing enterprise-grade data architectures for business-critical systems.",
@@ -63,7 +63,7 @@ export const experience: Experience[] = [
     role: "Senior Software Developer",
     period: "May 2022 – Feb 2024",
     duration: "1 year 10 months",
-    location: "São Paulo, Brazil",
+    location: "Salvador, Brazil",
     description: [
       "Developed mission-critical software for enterprise clients in the aerospace and defense sectors.",
       "Worked with Python, Django REST Framework, and Oracle databases.",
@@ -97,7 +97,7 @@ export const experience: Experience[] = [
     role: "IT Consultant – Python / Django",
     period: "Jan 2021 – Aug 2021",
     duration: "8 months",
-    location: "São Paulo, Brazil",
+    location: "Salvador, Brazil",
     description: [
       "Provided technical consulting and Python/Django development for business clients.",
     ],

@@ -14,7 +14,7 @@ export default function Footer() {
               Eduardo<span className="text-accent">.</span>
             </Link>
             <p className="text-muted text-sm mt-1">
-              Senior Python Engineer · Data Architect · São Paulo, Brazil
+              Senior Python Engineer · Data Architect · Salvador, Brazil
             </p>
           </div>
 
