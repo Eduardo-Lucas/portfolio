@@ -101,7 +101,7 @@ export default function AboutPage() {
                   and support digital transformation.
                 </p>
                 <p>
-                  My career has taken me from Salvador to São Paulo, including professional
+                  My career has taken me from Salvador to Salvador, including professional
                   work in the US — where I met colleagues from across the globe: India,
                   Australia, UK, France, and beyond.
                 </p>
